@@ -25,5 +25,9 @@ chmod 666 /opt/phabricator/conf/local/local.json
 # if container restart, fix mysql rights
 chown -R mysql:mysql /var/lib/docker
 
+
+# config
+/opt/phabricator/bin/config set pygments.enabled true
+
 cd /opt/phabricator && ./bin/storage upgrade --force
 cd /opt/phabricator && ./bin/phd restart
