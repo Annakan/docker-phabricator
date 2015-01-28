@@ -23,7 +23,8 @@ touch /opt/phabricator/conf/local/local.json
 chmod 666 /opt/phabricator/conf/local/local.json
 
 # if container restart, fix mysql rights
-chown -R mysql:mysql /var/lib/docker
+# *Annkan* this line makes no sense neither in relation to mysql nor inside a docker container where /var/lib/docker does not exist ...
+#chown -R mysql:mysql /var/lib/docker
 
 
 # config
